@@ -16,7 +16,6 @@ const TodoListBlock = styled.div`
 const TodoList = ({ todos, workState, toggles }) => {
     return (
         <TodoListBlock>
-            <StyledToggle />
             <TodoListItem todos={todos} workState={workState} toggles={toggles} />
         </TodoListBlock>
     );

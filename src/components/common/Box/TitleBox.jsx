@@ -1,10 +1,11 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 const TitleBox = styled.h3`
-  font-size: 32px;
-  font-weight: 700;
-  padding: 0 23px;
-  margin: 26px 0 15px;
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 0 23px;
+    margin: 13px 0 15px;
 `;
 
 export default TitleBox;

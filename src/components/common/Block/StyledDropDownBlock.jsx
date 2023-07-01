@@ -1,31 +1,25 @@
 import React, { useState } from 'react';
 import { styled } from 'styled-components';
 const StyledDropDownBlock = styled.div`
-    /* width: 194px; */
     box-sizing: border-box;
     padding: 7px 9px;
-    margin: 15px 10px;
+    margin: 10px 10px;
     display: flex;
     border: none;
     border-radius: 25px;
-    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
-    background-color: #fefefe;
-
+    box-shadow: inset 2px 2px 3px #1f9361, inset -2px -2px 3px #fff;
+    background-color: #fff;
     position: relative;
     transition: all 0.3s ease-in-out;
     outline: none;
     font-size: 14px;
     font-weight: 650;
     text-align: center;
-    /* -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none; */
     &::-ms-expand {
         display: none;
     }
     label {
-        /* background-color: skyblue; */
-        width: 150px;
+        width: 130px;
         box-sizing: border-box;
         padding: 5px;
         border-radius: 20px;
@@ -35,8 +29,10 @@ const StyledDropDownBlock = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-around;
+        color: #31be86;
         &.active {
-            color: #31be86;
+            color: #000;
+
             .countNum {
                 background-color: #fff;
             }
@@ -45,13 +41,12 @@ const StyledDropDownBlock = styled.div`
 `;
 const Glider = styled.span`
     position: absolute;
-    height: 32px;
-    width: 150px;
+    height: 69%;
+    width: 130px;
     z-index: 1;
     border-radius: 99px; // just a high number to create pill effect
     transition: 0.25s ease-out;
-    background-color: #c9f4e9;
-    box-shadow: 1px 1px 2px #babecc, -1px -1px 2px #fff;
+    background-color: #dcfff5;
     transform: translateX(${(props) => props.translatevalue}%);
 `;
 
@@ -63,6 +58,7 @@ const CountNum = styled.span`
     background-color: #c9f4e9;
     border-radius: 10px;
     color: #31be86;
+    line-height: 19px;
 `;
 
 const StyledDropDown = ({ onChangeHandler }) => {

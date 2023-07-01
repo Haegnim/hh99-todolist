@@ -4,12 +4,12 @@ const StyledTextAreaBox = styled.div`
     display: flex;
     flex-direction: column;
     textarea {
-        width: 194px;
+        width: 100%;
         height: 250px;
         padding: 15px;
         margin: 10px 0 10px 0;
         box-sizing: border-box;
-        border: 1px solid #fff;
+        border: none;
         border-radius: 16px;
         outline: none;
         background: #edf1f3;
@@ -17,14 +17,13 @@ const StyledTextAreaBox = styled.div`
         color: #668591;
         font-weight: 650;
         transition: all 0.2s ease-in-out;
-        box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.1);
-        /* backdrop-filter: blur(5px);
-        background: rgba(255, 255, 255, 0.2);
-        border-left: 2px solid rgba(255, 255, 255, 0.3);
-        border-top: 2px solid rgba(255, 255, 255, 0.3); */
-        &:hover,
+        box-shadow: 5px 5px 5px #1f9361, -5px -5px 5px #3edd99;
+        &:hover {
+            box-shadow: 2px 2px 5px #1f9361, 2px -2px 5px #3edd99;
+        }
         &:focus {
-            border: 1px solid #31be86;
+            box-shadow: inset 2px 2px 3px #1f9361, inset -2px -2px 3px #fff;
+            background-color: #f7f7f7;
         }
     }
     label {

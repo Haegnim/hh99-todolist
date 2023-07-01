@@ -3,42 +3,54 @@ import { styled } from 'styled-components';
 const IconBox = styled.div`
     display: flex;
     justify-content: space-between;
+
     &.ListUl {
-        margin-left: 5%;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        justify-content: flex-end;
         .id-box {
             width: 30px;
             height: 30px;
+            position: absolute;
+            top: 11px;
+            left: 11px;
             border-radius: 15px;
             font-size: 20px;
-            margin-right: 16px;
+            /* margin-right: 16px; */
         }
-        .icon-box > #check-icon {
-            height: 24px;
-            margin-right: 16px;
-        }
-        .icon-box > #delete-icon {
-            font-size: 32px;
+        .icon-box {
+            position: absolute;
+            top: 12px;
+            right: 4px;
+            #check-icon {
+                height: 24px;
+                margin-right: 16px;
+                margin-bottom: 0;
+            }
+            #delete-icon {
+                height: 24px;
+            }
         }
     }
     .icon-box > #check-icon {
-        height: 14px;
+        height: 16px;
         fill: ${(props) => props.isdonecolor};
         margin-right: 8px;
-        transition: all 0.3s ease-in-out;
+        margin-bottom: 1px;
     }
     .icon-box > #check-icon:hover,
     .icon-box > #check-icon:focus {
         fill: #31af7f;
     }
     .icon-box > #delete-icon {
-        color: #878787;
-        margin-right: 8px;
-        font-size: 18px;
-        transition: all 0.5s ease-in-out;
+        fill: #b5b5b5;
+        height: 16px;
+        margin-bottom: 1px;
     }
     .icon-box > #delete-icon:hover,
     .icon-box > #delete-icon:focus {
-        color: #ff3232;
+        fill: #ff3232;
     }
 `;
 

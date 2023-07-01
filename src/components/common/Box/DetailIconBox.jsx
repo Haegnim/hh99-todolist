@@ -6,23 +6,21 @@ const DetailIconBox = styled.div`
     right: 0;
     transform: translate(-24px, 60px);
     font-size: 46px;
-
-    color: #878787;
+    fill: #b5b5b5;
     #icon-heart {
-        height: 32px;
+        height: 33px;
         fill: ${(props) => props.isdoneColor};
         margin-right: 18px;
-        margin-bottom: 1px;
-        transition: all 0.2s ease-in-out;
     }
     #icon-heart:hover {
         fill: #31be86;
     }
     #icon-Xmark {
-        transition: all 0.2s ease-in-out;
+        height: 32px;
+        margin-bottom: 2px;
     }
     #icon-Xmark:hover {
-        color: #ff3322;
+        fill: #ff3322;
     }
 `;
 

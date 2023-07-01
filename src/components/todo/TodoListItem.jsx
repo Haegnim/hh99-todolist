@@ -7,13 +7,14 @@ import IconBox from '../common/Box/IconBox';
 import { useDispatch } from 'react-redux';
 import { deleteItem, toggleItem } from '../../redux/modules/todos';
 import { Link } from 'react-router-dom';
-import { ReactComponent as Heartcheck } from '../../lib/assets/heartcheck.svg';
+import { ReactComponent as Check } from '../../lib/assets/check.svg';
+import { ReactComponent as Trash } from '../../lib/assets/trash.svg';
 
 const TodoItemBlock = styled.ul`
     max-height: 600px;
     overflow-y: scroll;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 10px 10px 80px 10px;
     margin: 0;
     list-style: none;
     display: flex;
@@ -56,6 +57,7 @@ const TodoItem = styled.li`
         flex-direction: row;
         align-items: center;
         height: 80px;
+        position: relative;
         &:hover {
             /* transform: scale(1.03); */
         }
@@ -74,6 +76,8 @@ const TodoItem = styled.li`
         }
         &.ListUl {
             width: 65%;
+            position: absolute;
+            left: 80px;
             .link > .title {
                 font-size: 20px;
             }
@@ -113,7 +117,7 @@ function TodoListItem({ todos, workState, toggles }) {
     };
 
     const isdoneColor = (isdone) => {
-        return isdone === true ? '#31af7f' : '#878787';
+        return isdone === true ? '#31af7f' : '#b5b5b5';
     };
 
     const todoList = () => {
@@ -133,15 +137,13 @@ function TodoListItem({ todos, workState, toggles }) {
                         <IconBox className={getKeyByValue()} isdonecolor={isdoneColor(item.isDone)}>
                             <IdBox className="id-box">{item.id}</IdBox>
                             <div className="icon-box">
-                                <Heartcheck
-                                    icon={faHeart}
+                                <Check
                                     id="check-icon"
                                     onClick={() => {
                                         dispatch(toggleItem(item.id));
                                     }}
                                 />
-                                <FontAwesomeIcon
-                                    icon={faXmark}
+                                <Trash
                                     id="delete-icon"
                                     onClick={() => {
                                         dispatch(deleteItem(item.id));
